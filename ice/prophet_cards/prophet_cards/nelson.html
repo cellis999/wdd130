@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russell M. Nelson</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+        /* Insert styles here, this is called an internal stylesheet  */
+        body {
+            background: #FFECD7;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        #container {
+            border: 5px solid #004E63;
+            border-radius: 30px;
+            align-items: center;
+            background-color: #008DB1;
+            grid-column: 2;
+            font-family: 'Helvetica', sans-serif;
+            text-align: center;
+        }
+        #title {
+            margin: 40px 10px 10px 10px;
+            font-size: 40px;
+            color: #FFFFFE
+        }
+
+        #link {
+            font-size: 20px;
+            text-decoration: none;
+            color: #91E4FB
+        }
+        #image {
+            border: 5px solid #FFFFFE;
+            margin: 10px;
+        }
+        .facts {
+            margin:0;
+            font-size: 20px;
+            display: inline-block;
+            text-align: left;
+            color: #FFFFFE;
+        }
+        #quote {
+            font-size: 25px;
+            color:#FFD783;
+            font-family: 'nanum brush script', cursive;
+            margin: 10px 50px 40px 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1 id="title">Russell M. Nelson</h1>
+    <a id="link" href="https://www.churchofjesuschrist.org/">17th President of The Church of Jesus Christ of Latter-day Saints</a>
+    <img id="image" src="images/russell_nelson.png" alt="Russell M. Nelson">
+    <ul class="facts">
+        <li>Born: Sep 9, 1924</li>
+        <li>Apostle: Apr 7, 1984</li>
+        <li>Prophet: Jan 14, 2018</li>
+    </ul>
+    <p id="quote">"I urge you to devote time each week -- for the rest of your life -- to increase your understanding of the Atonement of Jesus Christ."</p>
+    </div>
+</body>
+</html>
