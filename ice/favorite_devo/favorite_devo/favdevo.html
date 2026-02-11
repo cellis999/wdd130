@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Favorite Devotionals</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="script/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div class="header-image">
+          <h1>My Favorite<br />Devotionals</h1>
+        </div>
+      </header>
+      <main>
+        <div class="content-box">
+          <!-- Add your devotional content here -->
+          <table id="devo-table">
+            <tr>
+              <th>Speaker</th>
+              <th>Title</th>
+              <th>Location</th>
+              <th>Year</th>
+            </tr>
+            <tr>
+              <td>Go and Do Thou Likewise</td>
+              <td>President Alvin F. Meredith III</td>
+              <td>I-Center</td>
+              <td>January 13, 2026</td>
+            </tr>
+            <tr>
+              <td>Washing Their Nets</td>
+              <td>Jennifer Platt</td>
+              <td>I-Center</td>
+              <td>January 20, 2026</td>
+            </tr>
+            <tr>
+              <td>"Severe Mercy"-Love and Sacrifice</td>
+              <td>Elder Bruce C. & Sister Marie Hafen</td>
+              <td>I-Center</td>
+              <td>January 27, 2026</td>
+            </tr>
+          </table>
+          <form>
+            <label for="speaker">Speaker:</label>
+            <input type="text" id="speaker" name="speaker" />
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" />
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" />
+            <label for="year">Year:</label>
+            <input type="text" id="year" name="year" />
+            <button id="add-button">Add Devotional</button>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
