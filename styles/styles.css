@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
 #wrapper {
     position: sticky;
     top: 0;
@@ -8,6 +10,7 @@
     gap: 5px;
     background-color: #274C77;
     color:#E7ECEF;
+    font-family: 'SN Pro', sans-serif;
 }
 
 #logo {
@@ -30,6 +33,7 @@ nav ul {
     justify-content: center;
     gap: 50px;
     background-color: #6096BA;
+    font-family: 'SN Pro', sans-serif;
 }
 
 nav ul a{
@@ -47,8 +51,11 @@ main {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 75px 1fr 1fr;
     padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     min-height: 100vh;
     margin: 0px;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 h1 {
@@ -76,6 +83,7 @@ footer {
     padding: 0px;
     margin: 0px;
     padding: 10px;
+    font-family: 'SN Pro', sans-serif;
 }
 footer p {
     margin: 0;
