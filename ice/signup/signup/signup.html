@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Feed Sign Up</title>
+
+    <style>
+      * {
+        margin: 0;
+      }
+
+      body {
+        background: rgb(120, 96, 64);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      }
+
+      h3 {
+        text-align: center;
+        grid-row: 2;
+      }
+
+      #background {
+        grid-column: 1/6;
+        align-self: center;
+        max-height: 100%;
+        max-width: 100%;
+      }
+
+      #formContainer {
+        margin: 0;
+        overflow: hidden;
+        grid-template-columns: repeat(5, 104px);
+        grid-template-rows: 150px 500px 140px;
+        grid-column: 2;
+        align-items: center;
+        border: 15px solid rgb(10, 10, 112);
+        border-radius: 20px;
+        align-content: center;
+        background-color: white;
+        display: grid;
+      }
+
+      #closeBtn {
+        grid-row: 1;
+        grid-column: 1;
+        justify-self: end;
+        margin: 10px;
+        padding: 5px 10px;
+        background-color: rgb(255,255,255);
+        color: black;
+        border: 1px solid rgb(159, 156, 156);
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #scriptures {
+        grid-row: 3;
+        grid-column: 1/6;
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding-top: 5px;
+      }
+
+      #myForm {
+        grid-row: 2;
+      }
+
+      #bom,
+      #dc,
+      #pgp,
+      #nt,
+      #ot {
+        width: 100px;
+        height: 140px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+      <div id="formContainer">
+        <img
+        id="background"
+        src="images/jesus_feeds_5000.jpeg"
+        alt="background img"
+      />
+        <h3>Sign Up for Daily Scripture Feed</h3>
+        <form id="myForm">
+          <button type="button" id="closeBtn">X</button>
+          <label for="username">User Name:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label>Gender:</label>
+          <div>
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label for="male">Male</label>
+            <input
+              type="radio"
+              id="female"
+              name="gender"
+              value="female"
+              required
+            />
+            <label for="female">Female</label>
+          </div>
+
+          <section>
+            <input type="checkbox" id="newsletter" name="newsletter" />
+            <label for="newsletter">Subscribe to newsletter</label>
+          </section>
+
+          <section>
+            <input type="checkbox" id="conditions" name="conditions" required />
+            <label for="conditions"
+              >I acknowledge the terms and conditions</label
+            >
+          </section>
+
+          <section>
+            <button type="submit">Submit</button>
+          </section>
+        </form>
+        <div id="scriptures">
+        <img id="bom" src="images/book_of_mormon.webp" alt="bom" />
+        <img id="dc" src="images/doctrine_and_covenants.webp" alt="dc" />
+        <img id="pgp" src="images/pearl_of_great_price.webp" alt="pgp" />
+        <img id="nt" src="images/new_testament.webp" alt="nt" />
+        <img id="ot" src="images/old_testament.webp" alt="ot" />
+      </div>
+      </div>
+
+    <div id="output"></div>
+
+    <script>
+      // Here is some Javascript to start looking forward to wdd131
+      document
+        .getElementById("closeBtn")
+        .addEventListener("click", function () {
+          document.getElementById("formContainer").style.display = "none";
+        });
+      const form = document.getElementById("myForm");
+      const output = document.getElementById("output");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Stop form from actually submitting
+
+        const formData = new FormData(form);
+        const entries = [];
+
+        for (const [key, value] of formData.entries()) {
+          if (key == "password") {
+            entries.push(
+              `<strong>${key}</strong>: ${value} (you should probably encrypt the password)`,
+            );
+          } else {
+            entries.push(`<strong>${key}</strong>: ${value}`);
+          }
+        }
+
+        output.innerHTML = `
+            <br>  
+            <h3>Here is the data that would be sent to the server:</h3>
+            <ul>
+                ${entries.map((item) => `<li>${item}</li>`).join("")}
+            </ul>
+            `;
+      });
+    </script>
+  </body>
+</html>
