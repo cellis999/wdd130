@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Report</title>
+    <link href="styles/styles.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+      <div id="wrapper">
+        <img id="logo" src="images/Logo.png" alt="Logo" />
+        <p id="title-text">Code o' Connor</p>
+      </div>
+      <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="wwr/index.html">WWR</a></li>
+    <li><a href="client_report.html">Client Report</a></li>
+
+    <li class="dropdown-container">
+      <div class="dropdown-header">
+        <button type="button" id="ice-arrow" onclick="toggleIceMenu(event)">></button>
+        <a href="ice.html">ICE Challenges</a>
+      </div>
+
+      <ul id="ice-submenu" class="submenu">
+        <li><a href="ice/prophet_cards/prophet_cards/nelson.html" target="_blank">Russell M. Nelson</a></li>
+        <li><a href="ice/favorite_devo/favorite_devo/favdevo.html" target="_blank">Favorite Devotionals</a></li>
+        <li><a href="ice/valentines/valentines/index.html" target="_blank">Valentines Page</a></li>
+        <li><a href="ice/positioning/positioning/positioning.html" target="_blank">Positioning Activity</a></li>
+        <li><a href="ice/grid_flags/grid_flags/flags.html" target="_blank">Grid Flags</a></li>
+        <li><a href="ice/gallery/gallery/gallery.html" target="_blank">Gallery</a></li>
+        <li><a href="ice/signup/signup/signup.html" target="_blank">Sign Up Page</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#">About Me</a></li>
+  </ul>
+</nav>
+    </header>
+    <main>
+        <h2>Client Report</h2>
+        <p id="disclaimer">I answered the questions I thought were relevant because I did my own website.</p>
+        <p>HOW DID YOU DECIDE WHAT CONTENT TO USE FOR YOUR SITE?: When I decided to create a portfolio, I decided I wanted to be able to showcase all my work
+            throughout my years of schooling. I still have some placeholder images in my website as 
+            I am still waiting to finish up some stuff and get some images of projects, but I wanted it to
+            look as complete as possible.
+        </p>
+        <p>HOW DID YOU COMMUNICATE WITH YOUR DEVELOPER?: I did my own website for this project, but I did get feedback from one of the other developers.</p>
+        <p>HOW WAS YOUR EXPERIENCE MANAGING WITH GITHUB?: GitHub wasn't a huge deal for me, as I have done large scale team projects with
+            merge management, etc. No issues with pushing or pulling, and everything went smoothly.
+        </p>
+        <p>WHAT WAS THE MOST CHALLENGING PART OF THIS PROJECT?: The most challenging part of the project for me
+            had to be the dynamic programming. I have never done any dynamic programming so I definitely challenged
+            myself with that. I also had a couple issues with pathing, but I figured that out.
+        </p>
+        <p>WHAT DID YOU ENJOY MOST ABOUT THIS PROJECT?: I definitely enjoyed seeing the result. I am glad to 
+            see the work that I was able to put in come back as something special. I am excited to continue to build
+            on this throughout the years.
+        </p>
+        <p>WHAT WOULD I DO DIFFERENTLY?: I think I would spend more time creating a uniform feel to my project cards.
+            I had different project cards on my home page then my hardware and software pages, so I ended up just copying
+            the HTML I was injecting on the hardware page and putting it in my front page. I think I could've saved myself
+            a lot of time if I had planned that from the beginning.
+        </p>
+        <p>DO YOU FEEL MORE CONFIDENT ABOUT WORKING ON REAL WORLD PROJECTS AFTER THIS?: Yes! I learned a bunch of new skills.
+            I think being able to figure out how JavaScript works and utilize it in my final project was a great experience that will
+            benefit me in the workplace.
+        </p>
+        <a href="https://cellis999.github.io/ConnorBuilt/" target ="_blank">ConnorBuilt Website</a>
+    </main>
+    <footer>
+      <p>Copyright &copy; 2026 Connor</p>
+      <ul>
+        <!-- might not keep these but I wanted them just in case I decided I liked them-->
+        <li>
+          <a href="https://www.instagram.com" target="_blank">Instagram</a>
+        </li>
+        <li><a href="https://www.youtube.com" target="_blank">YouTube</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+      </ul>
+    </footer>
+    <script>
+      function toggleIceMenu(event) {
+        event.stopPropagation();
+        const submenu = document.getElementById("ice-submenu");
+        const arrow = document.getElementById("ice-arrow");
+        submenu.classList.toggle("open");
+        arrow.classList.toggle("rotate-arrow");
+      }
+
+      // Close the submenu when clicking outside of it
+      document.addEventListener("click", function (event) {
+        const submenu = document.getElementById("ice-submenu");
+        const arrow = document.getElementById("ice-arrow");
+        if (!submenu.contains(event.target) && !event.target.classList.contains("arrow-btn")) {
+          submenu.classList.remove("open");
+          arrow.classList.remove("rotate-arrow");
+        }
+      });
+
+    </script>
+</body>
+</html>
